@@ -1,0 +1,114 @@
+
+:root {
+	--cards: 6;
+	--cardHeight: 47vh;
+	--cardTopPadding: 2.5em;
+	--cardMargin: 4vw;
+}
+
+.containerx {
+	width: 60%;
+	margin-top: 100px;
+	margin-bottom: 100px;
+	margin-right: auto;
+	margin-left: auto;
+	position: sticky;
+}
+
+#cardsA {
+	list-style: none;
+	padding-left: 0;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(var(--cards), var(--cardHeight));
+	gap: var(--cardMargin);
+	padding-bottom: calc(var(--cards) * var(--cardTopPadding));
+	margin-bottom: var(--cardMargin);
+}
+
+#card1 {
+	--index: 1;
+}
+#card2 {
+	--index: 2;
+}
+#card3 {
+	--index: 3;
+}
+#card4 {
+	--index: 4;
+}
+#card5 {
+	--index: 5;
+}
+#card6 {
+	--index: 6;
+}
+
+.card {
+	position: sticky;
+	top: 0;
+	padding-top: calc(var(--index) * var(--cardTopPadding));
+}
+
+#card1 .card-body {
+	background-color: #ff5b5d;
+    color: white;
+
+}
+#card2 .card-body {
+	/* background-color: #7EC4CF; */
+	background-color:  #d4d6ff;
+	
+
+}
+#card3 .card-body {
+	background-color: #66da78;
+	color: white;
+
+	
+}
+#card4 .card-body {
+	background-color: #ffe0eb;
+	
+	
+}
+#card5 .card-body {
+	background-color: #cffaea;
+	
+	
+}
+#card6 .card-body {
+	background-color: #6440FB;
+	color: white;
+	
+	
+}
+
+.card-body {
+	display: block;
+	box-sizing: border-box;
+	padding: 30px;
+	border-radius: 50px;
+	box-shadow: 0 2px 12px 0 rgba(31, 46, 84, .06);
+	height: var(--cardHeight);
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+	transition: all 0.5s;
+}
+
+h2 {
+	font-size: 2.5em;
+}
+
+@media screen and (max-width: 767px) {
+  
+
+    .containerx {
+        width: 90%; /* Make the container full width on small screens */
+    }
+
+    /* Add more styles as needed */
+}
